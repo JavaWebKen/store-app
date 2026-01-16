@@ -18,7 +18,7 @@ public class ProductController {
     private final IProductService iProductService;
 
     @GetMapping
-    public List<ProductDto> getProducts() { // DTO Pattern
+    public List<ProductDto> getProducts() throws  InterruptedException{ // DTO Pattern
         List<ProductDto> productList = iProductService.getProducts();
         return productList;
     }
