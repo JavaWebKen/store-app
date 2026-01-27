@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class LoggingController {
 
-    // private static final Logger log = LoggerFactory.getLogger(LoggingController.class);
+    private static final Logger log = LoggerFactory.getLogger(LoggingController.class);
 
     @GetMapping
     public ResponseEntity<String> testLogging() {
