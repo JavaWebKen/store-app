@@ -25,6 +25,7 @@ info.app.description=App Description
 info.app.version=1.0.0
 info.app.contact.email=me@test.com
 
-spring.security.user.name=user
-spring.security.user.password=password
-spring.security.user.roles=USER,ADMIN
+#temporary for initial testing
+#spring.security.user.name=user
+#spring.security.user.password=password
+#spring.security.user.roles=USER,ADMIN

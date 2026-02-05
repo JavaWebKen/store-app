@@ -1,6 +1,7 @@
 package com.javawebken.mystore.controller;
 
 import com.javawebken.mystore.dto.UserDto;
+import jakarta.validation.constraints.Size;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.RequestEntity;
 import org.springframework.validation.annotation.Validated;
@@ -33,11 +34,11 @@ public class DummyController {
         return "Received headers with value : " + headers.toString();
     }
 
-//    @GetMapping("/search")
-//    public String searchUser(@Size(min = 5, max = 30) @RequestParam(required = false, defaultValue = "Guest",
-//            name = "name") String userName) {
-//        return "Searching for user : " + userName;
-//    }
+    @GetMapping("/search")
+    public String searchUser(@Size(min = 5, max = 30) @RequestParam(required = false, defaultValue = "Guest",
+            name = "name") String userName) {
+        return "Searching for user : " + userName;
+    }
 
     @GetMapping("/multiple-search")
     public String multipleSearch(@RequestParam Map<String,String> params) {
@@ -46,7 +47,7 @@ public class DummyController {
 
     @GetMapping({"/user/{userId}/posts/{postId}", "/user/{userId}"})
     public String getUser(@PathVariable(name = "userId") String id,
-                          @PathVariable(required = false) String postId) {
+            @PathVariable(required = false) String postId) {
         return "Searching for user : " + id + " and post : " + postId;
     }
 
